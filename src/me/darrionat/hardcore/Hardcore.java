@@ -11,16 +11,10 @@ public class Hardcore extends JavaPlugin {
 	public void onEnable() {
 		Bootstrapper bootstrapper = Bootstrapper.getBootstrapper();
 		bootstrapper.initialize(this);
-
 		bootstrapper.getNaturalRegenerationService().disableNaturalRegeneration();
 	}
 
-	@Override
-	public void onDisable() {
-
-	}
-
 	public void log(String s) {
-		System.out.println(Utils.chat("[" + getName() + "] " + s));
+		this.getLogger().info(Utils.chat(s));
 	}
 }
